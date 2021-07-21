@@ -12,9 +12,11 @@ app.use(express.urlencoded(),express.json())
 app.use(morgan());
 
 //load routes
+const Files =   require('./routes/files')
+
 
 //setup routes
-
+app.use('/api/v1/files',Files);
 
 
 //Listen to app
